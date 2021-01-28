@@ -127,7 +127,78 @@ img {
   }
 
   hr {
-    border-color: black;
+    border: 1% solid black;
+  }
+
+}
+
+/* BONUS: come riferimento per la max-width ho preso 1px in meno rispetto alla minima larghezza dei laptop su screensiz.es */
+
+@media screen and (min-width: 420px)
+              and (max-width: 767px) {
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .row {
+    width: 100vw;
+    margin-top: 0;
+    padding: 1vw;
+  }
+
+  #lezioni .row>.left,
+  #lezioni .row>.right,
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right,
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+    margin: 1vw 0;
+    padding: 1vw;
+    font-size: 3vw;
+  }
+
+  #steps {
+    background-color: transparent;
+  }
+  #lezioni > .row,
+  #why > .row {
+    background-color: rgb(242 242 205);
+    transition: background-color 1s linear;
+    animation-name: color;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+  }
+  @keyframes color {
+    0% {color: transparent;}
+    50% {color: red;}
+    100% {color: black;}
+  }
+
+  img {
+    width: 20vw;
+    height: 20vw;
+    object-fit: contain;
+    margin: 1vw auto;
+  }
+  #why .row img {
+    padding: 4%;
+  }
+
+  h1 {
+    font-size: 5vw;
+    margin: 2vw auto;
+  }
+  h3 {
+    font-size: 4vw;
+  }
+
+  hr {
+    border: 1% solid black;
   }
 
 }

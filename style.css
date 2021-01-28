@@ -94,15 +94,18 @@ img {
   #lezioni .row>.right,
   #steps .row>.left,
   #steps .row>.central,
-  #steps .row>.right {
+  #steps .row>.right,
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
     width: 100%;
     margin: 1vw 0;
+    font-size: 6vw;
   }
 
   #steps {
     background-color: transparent;
   }
-
   #lezioni > .row,
   #why > .row {
     background-color: rgb(242 242 205);
@@ -111,6 +114,13 @@ img {
   img {
     width: 50%;
     height: auto;
+  }
+
+  h1 {
+    font-size: 10vw;
+  }
+  h3 {
+    font-size: 8vw;
   }
 
   hr {

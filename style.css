@@ -168,15 +168,6 @@ img {
   #lezioni > .row,
   #why > .row {
     background-color: rgb(242 242 205);
-    transition: background-color 1s linear;
-    animation-name: color;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-  }
-  @keyframes color {
-    0% {color: transparent;}
-    50% {color: red;}
-    100% {color: black;}
   }
 
   img {
@@ -192,6 +183,19 @@ img {
   h1 {
     font-size: 5vw;
     margin: 2vw auto;
+  }
+  #lezioni h1 {
+    width: 50%;
+    animation: moving 2s infinite linear alternate,
+               highlight 0.3s infinite linear;
+  }
+  @keyframes moving {
+    from {margin-left: 0;}
+    to {margin-left: 50%;}
+  }
+  @keyframes highlight {
+    from {background-color: transparent;}
+    to {background-color: yellow;}
   }
   h3 {
     font-size: 4vw;
